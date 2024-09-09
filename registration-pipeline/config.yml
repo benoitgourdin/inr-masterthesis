@@ -1,0 +1,25 @@
+model_name: registration_test_dt4d_1
+# Base directory of training/test data
+data_basedir: /home/mil/gourdin/inr_3d_data/data/DeformingThings4D/
+# Path of data to overfit
+data_path: /home/mil/gourdin/inr_3d_data/data/DeformingThings4D/bear3EP_Attack4.anime
+# Number of layers in RegistrationINR
+op_num_layers: 8
+# Layers with coordinates in RegistrationINR
+op_coord_layers: [0] #, 4]
+# Batch sizes
+batch_size_train: 1
+batch_size_val: 1
+# Epochs
+num_epochs: 10000
+# Log to weight&biases every x epochs (train and val)
+log_epoch_count: 2
+# Store model checkpoint every x epochs
+checkpoint_epoch_count: 50
+max_num_checkpoints: 5
+# Number of workers
+num_workers: 2
+# Training metric
+train_metric: mse
+# Validation metric
+val_metric: chamfer
